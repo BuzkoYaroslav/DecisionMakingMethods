@@ -1,0 +1,40 @@
+{
+  "Constants": [
+    {
+      "Key": "IndexesArrayObjectKey",
+      "Value": "Array"
+    },
+    {
+      "Key": "MatrixObjectKey",
+      "Value": "Matrix"
+    },
+    {
+      "Key": "DoubleValueObjectKey",
+      "Value": "Double"
+    },
+    {
+      "Key": "GainMatrixName",
+      "Value": "Gain matrix (Q)"
+    },
+    {
+      "Key": "LossesMatrixName",
+      "Value": "Losses matrix (L)"
+    },
+    {
+      "Key": "RegretsMatrixName",
+      "Value": "Regrets matrix (S)"
+    },
+    {
+      "Key": "BestDecisionsName",
+      "Value": "Best decisions (Alpha*)"
+    },
+    {
+      "Key": "BestLossName",
+      "Value": "Best loss (L*)"
+    },
+    {
+      "Key": "BestRegretName",
+      "Value": "Best regret (S*)"
+    }
+  ]
+}
