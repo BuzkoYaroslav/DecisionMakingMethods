@@ -24,12 +24,12 @@ namespace DecisionMakingMethods.Methods
 
         protected override float WeightForPointDown(PointF point)
         {
-            return (float)(Lambda * point.Y + (1 - Lambda) * point.X);
+            return (float)(Lambda * point.Y + (1.0 - Lambda) * point.X);
         }
 
         protected override float WeightForPointUpper(PointF point)
         {
-            return (float)(Lambda * point.X + (1 - Lambda) * point.Y);
+            return (float)(Lambda * point.X + (1.0 - Lambda) * point.Y);
         }
 
         protected override MathFunction UpperOptimalLevelLine(double loss)

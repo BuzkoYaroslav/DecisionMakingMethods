@@ -56,6 +56,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graphic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicPainter.cs" />
     <Compile Include="Methods\BayesNonRandomMethod.cs" />
     <Compile Include="Methods\BayesRandomMethod.cs" />
     <Compile Include="Methods\DecisionMakingMethod.cs" />
@@ -76,10 +80,10 @@
     <Compile Include="Methods\RegretNonRandomMethod.cs" />
     <Compile Include="Methods\RegretRandomMethod.cs" />
     <Compile Include="Methods\StatisticalMethod.cs" />
-    <Compile Include="Methods\TextOutput.cs">
+    <Compile Include="TextOutput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Methods\TextOutput.Designer.cs">
+    <Compile Include="TextOutput.Designer.cs">
       <DependentUpon>TextOutput.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -88,10 +92,13 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Graphic.resx">
+      <DependentUpon>Graphic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Methods\TextOutput.resx">
+    <EmbeddedResource Include="TextOutput.resx">
       <DependentUpon>TextOutput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

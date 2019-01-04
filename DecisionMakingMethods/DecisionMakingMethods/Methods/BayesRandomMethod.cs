@@ -25,11 +25,11 @@ namespace DecisionMakingMethods.Methods
 
         protected override MathFunction DownOptimalLevelLine(double loss)
         {
-            return (loss - Probabilities[0] * new XFunction(1.0)) / Probabilities[2];
+            return (loss - Probabilities[0] * new XFunction(1.0)) / Probabilities[1];
         }
         protected override MathFunction UpperOptimalLevelLine(double loss)
         {
-            return (loss - Probabilities[0] * new XFunction(1.0)) / Probabilities[2];
+            return (loss - Probabilities[0] * new XFunction(1.0)) / Probabilities[1];
         }
 
         protected override float WeightForPointUpper(PointF point)

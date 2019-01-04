@@ -25,15 +25,23 @@ namespace DecisionMakingMethods.Methods
         {
             var lossesMatrix = GetLossesMatrix(matrix);
 
-            var rows = Enumerable.Range(0, lossesMatrix.RowsCount).Where(row => matrix[row, 0] >= Threshold).ToArray();
+            var rows = Enumerable.Range(0, lossesMatrix.RowsCount).Where(row => matrix[row, 0] <= Threshold).ToArray();
 
-            var thresholdedMatrix = new double[rows.Length, lossesMatrix.ColumnsCount];
+            var thresholdedMatrix = new double[lossesMatrix.RowsCount, lossesMatrix.ColumnsCount];
+            for (int i = 0; i < thresholdedMatrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < thresholdedMatrix.GetLength(1); j++)
+                {
+                    thresholdedMatrix[i, j] = double.PositiveInfinity;
+                }
+            }
+
 
             for (int i = 0; i < rows.Length; i++)
             {
                 for (int j = 0; j < lossesMatrix.ColumnsCount; j++)
                 {
-                    thresholdedMatrix[i, j] = lossesMatrix[rows[i], j]; 
+                    thresholdedMatrix[rows[i], j] = lossesMatrix[rows[i], j]; 
                 }
             }
 

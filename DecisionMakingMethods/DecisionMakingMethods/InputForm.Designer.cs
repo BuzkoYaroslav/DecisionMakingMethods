@@ -41,7 +41,6 @@
             this.probabilityMatrixRowsNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.hurwitzAdditionalDataPanel = new System.Windows.Forms.Panel();
-            this.optimismNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.neymanAdditionalDataPanel = new System.Windows.Forms.Panel();
             this.thresholdNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -55,18 +54,19 @@
             this.qMatrixColumnsCountNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.optimismNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.qMatrixDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probabilityMatrixDataGridView)).BeginInit();
             this.probabilityMatrixPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.probabilityMatrixRowsNumUpDown)).BeginInit();
             this.hurwitzAdditionalDataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.optimismNumericUpDown)).BeginInit();
             this.neymanAdditionalDataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thresholdNumericUpDown)).BeginInit();
             this.bayesAdditionDataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.probabilityVectorDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qMatrixRowsCountNumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qMatrixColumnsCountNumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optimismNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -217,23 +217,6 @@
             this.hurwitzAdditionalDataPanel.Size = new System.Drawing.Size(588, 61);
             this.hurwitzAdditionalDataPanel.TabIndex = 6;
             // 
-            // optimismNumericUpDown
-            // 
-            this.optimismNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.optimismNumericUpDown.Location = new System.Drawing.Point(397, 19);
-            this.optimismNumericUpDown.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.optimismNumericUpDown.Name = "optimismNumericUpDown";
-            this.optimismNumericUpDown.Size = new System.Drawing.Size(186, 26);
-            this.optimismNumericUpDown.TabIndex = 1;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -371,6 +354,24 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "количество столбцов";
             // 
+            // optimismNumericUpDown
+            // 
+            this.optimismNumericUpDown.DecimalPlaces = 2;
+            this.optimismNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.optimismNumericUpDown.Location = new System.Drawing.Point(397, 19);
+            this.optimismNumericUpDown.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.optimismNumericUpDown.Name = "optimismNumericUpDown";
+            this.optimismNumericUpDown.Size = new System.Drawing.Size(186, 26);
+            this.optimismNumericUpDown.TabIndex = 1;
+            // 
             // InputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -403,7 +404,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.probabilityMatrixRowsNumUpDown)).EndInit();
             this.hurwitzAdditionalDataPanel.ResumeLayout(false);
             this.hurwitzAdditionalDataPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.optimismNumericUpDown)).EndInit();
             this.neymanAdditionalDataPanel.ResumeLayout(false);
             this.neymanAdditionalDataPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thresholdNumericUpDown)).EndInit();
@@ -412,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.probabilityVectorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qMatrixRowsCountNumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qMatrixColumnsCountNumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optimismNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,7 +430,6 @@
         private System.Windows.Forms.DataGridView probabilityMatrixDataGridView;
         private System.Windows.Forms.Panel probabilityMatrixPanel;
         private System.Windows.Forms.Panel hurwitzAdditionalDataPanel;
-        private System.Windows.Forms.NumericUpDown optimismNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel neymanAdditionalDataPanel;
         private System.Windows.Forms.NumericUpDown thresholdNumericUpDown;
@@ -446,5 +446,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.NumericUpDown probabilityMatrixRowsNumUpDown;
+        private System.Windows.Forms.NumericUpDown optimismNumericUpDown;
     }
 }

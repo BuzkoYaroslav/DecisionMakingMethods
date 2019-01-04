@@ -12,7 +12,7 @@ namespace DecisionMakingMethods.Methods
     {
         protected override MathFunction DownOptimalLevelLine(double loss)
         {
-            return loss;
+            return 0;
         }
 
         protected override MathFunction UpperOptimalLevelLine(double loss)

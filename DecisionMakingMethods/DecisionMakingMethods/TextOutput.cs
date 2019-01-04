@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using NumericalAnalysisLibrary.MathStructures;
 using NumericalAnalysisLibrary.Functions;
 
-namespace DecisionMakingMethods.Methods
+namespace DecisionMakingMethods
 {
     public partial class TextOutput : Form
     {

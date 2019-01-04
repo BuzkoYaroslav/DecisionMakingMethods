@@ -25,10 +25,10 @@ namespace DecisionMakingMethods.Methods
             var downPart = northwesternCorner.Where(item => item.Item2.Y < item.Item2.X).ToList();
 
             var downWeight = downPart.Min(item => WeightForPointDown(item.Item2));
-            var downBest = downPart.Find(item => item.Item2.X == downWeight);
+            var downBest = downPart.Find(item => WeightForPointDown(item.Item2) == downWeight);
 
-            var upWeight = downPart.Min(item => item.Item2.Y);
-            var upBest = downPart.Find(item => item.Item2.Y == upWeight);
+            var upWeight = upPart.Min(item => WeightForPointUpper(item.Item2));
+            var upBest = upPart.Find(item => WeightForPointUpper(item.Item2) == upWeight);
 
             var x = (downBest.Item2.Y - downBest.Item2.X) / (upBest.Item2.X - downBest.Item2.X + downBest.Item2.Y - upBest.Item2.Y);
             var middleWeight = x * upBest.Item2.X + (1 - x) * downBest.Item2.X;
@@ -153,9 +153,14 @@ namespace DecisionMakingMethods.Methods
             var pointX = points.Find(point => point.Item2.X == minX);
             var pointY = points.Find(point => point.Item2.Y == minY);
 
-            return points.Where(point => (point.Item2.X >= pointX.Item2.X && point.Item2.X <= pointY.Item2.X) && 
+            var northwestern = points.Where(point => (point.Item2.X >= pointX.Item2.X && point.Item2.X <= pointY.Item2.X) && 
                                          (point.Item2.Y >= pointY.Item2.Y && point.Item2.Y <= pointX.Item2.Y))
                          .ToList();
+
+            var origin = new PointF(0, 0);
+            northwestern.Sort((p1, p2) => Orientation(p1.Item2, p2.Item2, origin));
+
+            return northwestern;
         }
     }
 }

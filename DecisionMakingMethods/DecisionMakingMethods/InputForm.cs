@@ -36,7 +36,7 @@ namespace DecisionMakingMethods
         {
             InitializeComponent();
 
-            probabilityMatrixPanel.Visible = false;
+            probabilityMatrixPanel.Enabled = false;
             HideAdditionalDataPanels();
 
             UpdateQMatrixDataGridView();
@@ -58,10 +58,10 @@ namespace DecisionMakingMethods
             switch (taskType)
             {
                 case TaskType.Statistical:
-                    probabilityMatrixPanel.Visible = true;
+                    probabilityMatrixPanel.Enabled = true;
                     break;
                 default:
-                    probabilityMatrixPanel.Visible = false;
+                    probabilityMatrixPanel.Enabled = false;
                     break;
             }
         }
@@ -189,7 +189,7 @@ namespace DecisionMakingMethods
                 switch (methodType)
                 {
                     case MethodType.Hurwitz:
-                        lambda = Convert.ToInt32(optimismNumericUpDown.Value);
+                        lambda = Convert.ToDouble(optimismNumericUpDown.Value);
                         break;
                     case MethodType.Bayes:
                         var data = GetDataGridViewValues(probabilityVectorDataGridView);
@@ -306,7 +306,9 @@ namespace DecisionMakingMethods
                     textForm.Show();
                     if (taskType == TaskType.Randomized)
                     {
+                        var graphForm = new Graphic(response);
 
+                        graphForm.Show();
                     }
                 }
             }
